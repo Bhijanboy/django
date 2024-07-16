@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Services</h1>
+    <form action="">
+        <label for ="fullname">Full Name</label>
+        <input id="fullname" name="full" type="'text"><br>
+        <label for ="email">Email</label>
+        <input id="email" name="mail" type="'email"><br>
+        <label for ="phonenumber">Number</label>
+        <input id="PhoneNumber" name="phone" type="number"><br>
+        <label for ="address">Address</label>
+        <input id="Address" name="address" type="'text"><br>
+        <label for ="level">Level</label>
+        <input id="Level" name="level" type="'text"><br>
+        
+        
+        <button type="submit">Submit</button>
+
+    </form>
+    {{message}}
+    <h2>List of person</h2>
+    {% for p in person %}
+        <h3>Name:{{p.name}}</h3>
+        <h3>Email:{{p.email}}</h3>
+        <h3>PhoneNumber:{{p.phone}}</h3>
+        <hr>
+
+    {% endfor %}
+
+
+
+</body>
+</html>

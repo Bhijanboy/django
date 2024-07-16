@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<h1>List of Users</h1>
+<h2><a class="btn btn-primary" href="{%url 'createperson'%}">Add User</a></h2>
+<hr>
+
+{% for person in person_list %}
+<h2>Id:{{person.id}}</h2>
+<h2>Name:{{person.name}}</h2>
+<h2>Email:{{person.email}}</h2>
+<h2>Phone :{{person.phone}}</h2>
+<h2>Address:{{person.address}}</h2>
+
+<a class="btn btn-warning" href="{% url 'editperson' person.id  %}">Edit</a>
+
+<a class="btn btn-danger" href="{% url 'deleteperson' person.id %}">Delete</a>
+{% comment %} <h2><a href="/myapp/edit_person/{{person.id}}/">Edit</a></h2> {% endcomment %}
+{% comment %} <h2><a href="/myapp/delete_person/{{person.id}}/">Delete</a></h2> {% endcomment %}
+<hr>
+{% endfor %}
+<h1>Total users are {{total_person}}</h2>
+
+{% endblock content %}
+   
+            
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+

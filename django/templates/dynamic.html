@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>
+
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       
+        <script src="" async defer></script>
+        <h1>Dynamic Page </h1>
+        <h2>{{name}}</h2>
+        {%if display_email%}
+            <h2>Email:{{email}}</h2>
+
+        {% else %}
+            <h2>Email is hidden</h2>
+        {% endif %}
+        {% comment %} <h2>Email:{{email}}</h2> {% endcomment %}
+        <h2>Phone:{{phone}}</h2>
+        <h2>{{alternate_numbers}}</h2>
+        {% for number in alternate_numbers %}
+            <h3>{{number}}</h3>
+            <hr>
+        {% endfor %}
+
+        
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="{% static 'js/javascript.js'%}"></script>
+    </body>
+</html>
+
+

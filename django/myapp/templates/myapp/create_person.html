@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+     
+{% block content %}
+<h1>Create Person</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button class="btn btn-success">submit</button>
+    </form>
+    
+    <script src="" async defer></script>
+
+{% endblock content %}
